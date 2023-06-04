@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->string('email')->unique();
             $table->string('phone')->default('');
             $table->string('gender')->default('');
-            $table->timestamp('birthday');
+            $table->timestamp('birthday')->default(null);
             $table->string('password');
             $table->text('image')->nullable(true);
             $table->rememberToken();
