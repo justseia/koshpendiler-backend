@@ -9,12 +9,12 @@ return new class extends Migration {
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->text('full_name');
+            $table->string('full_name');
             $table->string('email')->unique();
             $table->text('phone')->default('');
             $table->text('gender')->default('');
             $table->timestamp('birthday');
-            $table->text('password');
+            $table->string('password');
             $table->text('image')->nullable(true);
             $table->rememberToken();
             $table->timestamps();
